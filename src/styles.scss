@@ -1,0 +1,80 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+// theming variable
+$lightPrimary: #F9FAFB;
+$lightSecondary: #E7DED7;
+$darkPrimary: #353535;
+$borderRadius: 1rem;
+$fontFamily: 'Roboto';
+// end theming variable
+
+// generic
+body {
+    font-family: $fontFamily;
+}
+.hover-pointer:hover {
+    cursor: pointer;
+}
+// end generic
+
+// background
+.bg-light {
+    background-color: $lightPrimary !important;
+}
+.bg-secondary {
+    background-color: $lightSecondary !important;
+}
+.bg-dark {
+    background-color: $darkPrimary !important;
+}
+// end background
+
+// text
+.text-light {
+    color: $lightPrimary !important;
+}
+.text-secondary {
+    color: $lightSecondary !important;
+}
+.text-dark {
+    color: $darkPrimary !important;
+}
+// end text
+
+// button
+.btn-light {
+    color: $darkPrimary !important;
+    background-color: $lightPrimary !important;
+    border-color: $lightPrimary !important;
+}
+.btn-light:hover {
+    color: $lightPrimary !important;
+    background-color: $darkPrimary !important;
+    border-color: $darkPrimary !important;
+}
+.btn-dark {
+    color: $lightPrimary !important;
+    background-color: $darkPrimary !important;
+    border-color: $darkPrimary !important;
+}
+.btn-dark:hover {
+    color: $darkPrimary !important;
+    background-color: $lightPrimary !important;
+    border-color: $lightPrimary !important;
+}
+//end button
+
+// border radious
+.rounded {
+    border-radius: $borderRadius !important;
+}
+.rounded-right {
+    border-radius: 0 $borderRadius $borderRadius 0 !important;
+}
+.rounded-left {
+    border-radius: $borderRadius 0 0 $borderRadius !important;
+}
+// end border radious
