@@ -1,0 +1,20 @@
+<div class="col-12 px-0">
+    <div class="col-12 pt-3">
+        <h6>Enter Mobile Number</h6>
+    </div>
+    <div class="col-12">
+        <input type="text"
+        class="col-12 telInput"
+        (keypress)="numberOnly($event)"
+        ng2TelInput
+        [ng2TelInputOptions]="{autoPlaceholder:'',allowDropdown:false,initialCountry: 'in',separateDialCode:true,autoHideDialCode: false,onlyCountries:['in']}"
+        (hasError)="hasError($event)"
+        (ng2TelOutput)="getNumber($event)"
+        (intlTelInputObject)="telInputObject($event)"
+        (countryChange)="onCountryChange($event)"
+        maxlength='10'
+        minlength='10'
+        [placeholder]=''
+        [max]="'10'" />
+    </div>
+</div>

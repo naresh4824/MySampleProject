@@ -1,0 +1,20 @@
+<div class="col-12 px-0">
+    <input type="file"  accept=".pdf" ng2FileSelect [uploader]="uploader" (onFileSelected)="onFileSelected($event)" *ngIf="!(uploader?.queue?.length)" />
+    
+    <div class="card fileCard  col-12 px-0" *ngFor="let item of uploader.queue">
+        
+       
+        <div class="col-2 px-2">
+            <span><img src='/assets/images/pdf.png'  class="pdfImage"/></span>
+        </div>
+        <div class="col-9 px-0 fileItemDiv">
+            <label class="col-12 px-0 my-0 attachedFileName">{{item?.file?.name}}</label>
+            <label class="col-12 px-0 my-0 attachedFileName">Size: {{ item?.file?.size/1024 | number:'.2' }} KB</label>
+        </div>
+        <div class="col-1 px-0 fileItemDiv">
+            <span (click)="removeFile()">X</span>
+        </div>
+        
+      </div>
+    <!-- <input type="file" id="file" (change)="handleFileInput($event)" multiple> -->
+</div>
